@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(228, 222, 215);
+        }
+        #circle{
+            position: absolute;
+            height: 10vw;
+            width: 10vw;
+            border-radius: 50%;
+            background: orangered;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            z-index: 99;
+        }
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+    <div id="main">
+    </div>
+
+    <script>
+        const main = document.querySelector('#main')
+        const c = document.querySelector('#circle')
+
+        main.addEventListener('mousemove', (e) =>{
+            c.style.left = e.clientX + 'px'
+            c.style.top = e.clientY + 'px'
+        })
+    </script>
+</body>
+</html>

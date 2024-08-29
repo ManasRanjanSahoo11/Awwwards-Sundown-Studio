@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: relative;
+            height: 10vw;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+        #overlays{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: orange;
+            bottom: -100%;
+            transition: all .2s ease;
+        }
+        .des, h1{
+            position: relative;
+            z-index: 9;
+        }
+
+        .container:hover #overlays{
+            bottom: 0%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div id="overlays"></div>
+        <h1>Manas Ranjan Sahoo</h1>
+        <div class="des">
+            <h6>Wave Sports</h6>
+            <p>Environments</p>
+        </div>
+    </div>
+</body>
+</html>

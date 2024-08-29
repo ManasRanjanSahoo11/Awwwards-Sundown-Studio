@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Text</title>
+    <style>
+        #text-container{
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        #text-container::-webkit-scrollbar{
+            display: none;
+        }
+
+        #texts{
+            display: inline-block;
+            white-space: nowrap;
+
+            animation-name: textmove;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+        }
+
+        #texts h1{
+            display: inline-block;
+            /* background-color: blue; */
+        }
+
+        @keyframes textmove {
+            form{
+                transform: translateX(0%);
+            }
+            to{
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="text-container">
+        <div id="texts">
+            <h1>Lorem, ipsum.</h1>
+            <h1>Lorem, ipsum.</h1>
+            <h1>Lorem, ipsum.</h1>
+        </div>
+        <div id="texts">
+            <h1>Lorem, ipsum.</h1>
+            <h1>Lorem, ipsum.</h1>
+            <h1>Lorem, ipsum.</h1>
+        </div>
+        <div id="texts">
+            <h1>Lorem, ipsum.</h1>
+            <h1>Lorem, ipsum.</h1>
+            <h1>Lorem, ipsum.</h1>
+        </div>
+        <div id="texts">
+            <h1>Lorem, ipsum.</h1>
+            <h1>Lorem, ipsum.</h1>
+            <h1>Lorem, ipsum.</h1>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime</title>
+    <style>
+        #hero1{
+            position: absolute;
+            margin: 10vw;
+            height: 20vw;
+            width: 20vw;
+            border-radius: 50%;
+            background-color: orangered;
+            filter: blur(15px);
+        }
+        #hero2{
+            position: absolute;
+            margin: 10vw;
+            height: 20vw;
+            width: 20vw;
+            border-radius: 50%;
+            background-color: orangered;
+            filter: blur(15px);
+
+            /* animation-name: anime;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+
+            animation: anime 2s linear infinite alternate;
+        }
+
+        @keyframes anime{
+            from{
+                transform: translate(-10%, -10%);
+            }
+            to{
+                transform: translate(10%, 10%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="hero1"></div>
+    <div id="hero2"></div>
+</body>
+</html>
